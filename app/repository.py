@@ -11,7 +11,6 @@ class _ByGroup(GlobalSecondaryIndex):
         projection = AllProjection()
 
     group: UnicodeAttribute = UnicodeAttribute(hash_key=True)
-    uid: UnicodeAttribute = UnicodeAttribute(range_key=True)
 
 
 class _UserModel(Model):
