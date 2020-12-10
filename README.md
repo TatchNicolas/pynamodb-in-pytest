@@ -2,7 +2,7 @@
 
 PynamoDB requires some parameters in metaclass of its models which are in fact irrelevant when running tests with [DynamoDB Local](https://hub.docker.com/r/amazon/dynamodb-local).
 
-This repo shows small trick to avoid having unnecessary if clauses in PynamoDB model definition by using Python's built-in `setattr` function.
+This repo shows a small trick to avoid having unnecessary if clauses in PynamoDB model definition by using Python's built-in `setattr` function.
 
 ```python
 @pytest.fixture(scope="function")
