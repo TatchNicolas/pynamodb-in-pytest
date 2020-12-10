@@ -14,7 +14,6 @@ def user_repo() -> Iterable[UserRepo]:
 
     repo: UserRepo = UserRepo()
 
-    # リクエスト先をDynamoDB Localへ向ける
     model_meta_class = getattr(repo.model, "Meta")
     setattr(model_meta_class, "table_name", "user_table_for_test")
     setattr(model_meta_class, "host", DDB_LOCAL_HOST)
