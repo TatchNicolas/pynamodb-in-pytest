@@ -16,8 +16,8 @@ def user_repo() -> Iterable[UserRepo]:
 
     model_meta_class = getattr(repo.model, "Meta")
     setattr(model_meta_class, "host", DDB_LOCAL_HOST)
-    setattr(model_meta_class, "table_name", "user_table_for_test")
     setattr(model_meta_class, "billing_mode", "PAY_PER_REQUEST")
+    setattr(model_meta_class, "table_name", "user_table_for_test")
     # or
     # setattr(model_meta_class, "read_capacity_units", 1)
     # setattr(model_meta_class, "write_capacity_units", 1)
