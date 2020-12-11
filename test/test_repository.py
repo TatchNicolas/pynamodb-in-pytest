@@ -39,5 +39,5 @@ def test_user_repo(user_repo: UserRepo) -> None:
     bob = user_repo.add_user(uid="002", name="Bob", group="Blue")
     chris = user_repo.add_user(uid="003", name="Chris", group="Blue")
 
-    users_in_red_group = user_repo.get_users_in_group(group="Blue")
-    assert users_in_red_group == [bob, chris]
+    users_in_blue_group = user_repo.get_users_in_group(group="Blue")
+    assert users_in_blue_group == [bob, chris]
