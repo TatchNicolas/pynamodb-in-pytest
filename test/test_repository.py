@@ -29,7 +29,7 @@ def user_repo() -> Iterable[UserRepo]:
 
     yield repo
     # Delete table after running a test function
-    # repo.model.delete_table()
+    repo.model.delete_table()
 
 
 def test_user_repo(user_repo: UserRepo) -> None:
